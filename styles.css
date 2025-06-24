@@ -2,11 +2,11 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: black; /* Whole background is black */
+  background-color: black; /* Whole background is black, except the ribbon */
   color: #fff; /* All text is white */
 }
 
-/* Fixed top ribbon styling */
+/* Fixed top ribbon */
 .top-ribbon {
   position: fixed;
   top: 0;
@@ -46,5 +46,6 @@ body {
   position: relative;
   opacity: 1;
   transition: opacity 0.2s linear;
+  /* No need for color here, inherited from body */
   text-shadow: 0 0 5px #000;
 }
