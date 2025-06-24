@@ -1,9 +1,12 @@
+/* Make all text white by default */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: black; /* Whole background is black */
+  color: #fff; /* All text is white */
 }
 
-/* Fixed top ribbon */
+/* Fixed top ribbon styling */
 .top-ribbon {
   position: fixed;
   top: 0;
@@ -15,23 +18,33 @@ body {
   z-index: 999;
 }
 
-/* Hero section */
+/* Hero section with hexagon grid pattern with gradient for 3D effect */
 .hero {
   height: 100vh;
-  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  background-image: 
+    repeating-conic-gradient(
+      from 0deg,
+      #000080 0deg 60deg,
+      #000055 60deg 120deg
+    ),
+    repeating-conic-gradient(
+      from 0deg,
+      #000080 0deg 60deg,
+      #000055 60deg 120deg
+    );
+  background-size: 100px 86px;
+  background-position: 
+    0 0,
+    50px 43px; /* offset for staggering */
+  background-repeat: repeat;
+  
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 3em;
   position: relative;
-  /* To enable fade out on scroll */
   opacity: 1;
   transition: opacity 0.2s linear;
-}
-
-/* Next section styling */
-.next-section {
-  padding: 50px;
-  background-color: #f2f2f2;
-  min-height: 100vh;
+  text-shadow: 0 0 5px #000;
 }
