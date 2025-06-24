@@ -58,8 +58,50 @@ body {
   padding-top: 60px; /* avoid overlap with ribbon */
 }
 
-/* Next section styles */
+/* About us and other sections */
 .next-section {
   padding: 50px;
   min-height: 100vh;
+}
+#about {
+  transition: opacity 0.2s linear;
+}
+
+/* Examples section styles */
+.examples {
+  padding: 50px;
+  background-color: #111; /* optional background for contrast */
+  color: #fff;
+}
+.examples h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  background-color: #222;
+  padding: 15px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.card h3 {
+  margin: 10px 0 5px 0;
+}
+.card p {
+  font-size: 0.9em;
 }
