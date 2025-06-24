@@ -1,24 +1,35 @@
-/* Make all text white by default */
+/* Make all text white by default and set background to black */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: black; /* Whole background is black, except the ribbon */
-  color: #fff; /* All text is white */
+  background-color: black; /* whole background is black */
+  color: #fff; /* all text white */
+  scroll-behavior: smooth; /* smooth scrolling for anchor links */
 }
 
-/* Fixed top ribbon */
+/* Fixed top ribbon styles */
 .top-ribbon {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: #333;
-  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
   padding: 10px;
-  text-align: center;
   z-index: 999;
 }
 
-/* Hero section with hexagon grid pattern with gradient for 3D effect */
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Hero section with hexagon grid background with gradient for 3D effect */
 .hero {
   height: 100vh;
   background-image: 
@@ -33,19 +44,22 @@ body {
       #000055 60deg 120deg
     );
   background-size: 100px 86px;
-  background-position: 
-    0 0,
-    50px 43px; /* offset for staggering */
+  background-position: 0 0, 50px 43px; /* staggering offset */
   background-repeat: repeat;
   
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 3em;
+  text-shadow: 0 0 5px #000;
   position: relative;
   opacity: 1;
   transition: opacity 0.2s linear;
-  /* No need for color here, inherited from body */
-  text-shadow: 0 0 5px #000;
+  padding-top: 60px; /* avoid overlap with ribbon */
+}
+
+/* Next section styles */
+.next-section {
+  padding: 50px;
+  min-height: 100vh;
 }
